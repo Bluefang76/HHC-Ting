@@ -169,9 +169,10 @@ namespace Wayfinding.UI
             if (GUILayout.Button("Align here, facing this way", _labelStyle,
                     GUILayout.Height(fontSize * 1.6f)))
             {
-                bool ok = float.TryParse(_manualX, out float x) &&
-                          float.TryParse(_manualY, out float y) &&
-                          float.TryParse(_manualHeading, out float heading);
+                float x = 0f, y = 0f, heading = 0f;
+                bool ok = float.TryParse(_manualX, out x) &&
+                          float.TryParse(_manualY, out y) &&
+                          float.TryParse(_manualHeading, out heading);
 
                 if (ok)
                 {
